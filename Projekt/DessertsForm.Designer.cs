@@ -1,5 +1,5 @@
 ﻿namespace Projekt {
-    partial class Form1 {
+    partial class DessertsForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,19 +23,33 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
+            // label1
             // 
-            resources.ApplyResources(this, "$this");
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(259, 431);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DESERTS";
+            // 
+            // DessertsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.label1);
+            this.Name = "DessertsForm";
+            this.Text = "DessertsForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
-
