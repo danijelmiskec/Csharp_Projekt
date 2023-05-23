@@ -14,6 +14,10 @@ namespace Projekt {
             InitializeComponent();
         }
 
-
+        private void BackBtn_Click(object sender, EventArgs e) {
+            var startform = new StartForm();
+            startform.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -90,6 +90,7 @@
             this.Controls.Add(this.BurgerPictureBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "StartForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).EndInit();

@@ -17,21 +17,26 @@ namespace Projekt {
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
             var burgerForm = new BurgersForm();
             burgerForm.ShowDialog();
+            this.Close();
+            
         }
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
             var pommesForm = new PommesForm();
             pommesForm.ShowDialog();
+            this.Close();
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
             var dessertsForm = new DessertsForm();
             dessertsForm.ShowDialog();
+            this.Close();
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
             var drinksForm = new DrinksForm();
             drinksForm.ShowDialog();
+            this.Close();
         }
     }
 }

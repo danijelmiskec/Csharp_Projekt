@@ -23,33 +23,34 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // BackButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(376, 467);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BURGER";
+            this.BackButton.Location = new System.Drawing.Point(12, 971);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(190, 50);
+            this.BackButton.TabIndex = 0;
+            this.BackButton.Text = "Povratak";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // BurgersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BackButton);
             this.Name = "BurgersForm";
             this.Text = "BurgersForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }
