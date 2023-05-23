@@ -38,5 +38,11 @@ namespace Projekt {
             drinksForm.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+            var caffeForm = new CaffeForm();
+            caffeForm.ShowDialog();
+            this.Close();
+        }
     }
 }

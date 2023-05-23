@@ -52,6 +52,12 @@
     <Compile Include="BurgersForm.Designer.cs">
       <DependentUpon>BurgersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaffeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaffeForm.Designer.cs">
+      <DependentUpon>CaffeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DessertsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BurgersForm.resx">
       <DependentUpon>BurgersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaffeForm.resx">
+      <DependentUpon>CaffeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DessertsForm.resx">
       <DependentUpon>DessertsForm.cs</DependentUpon>
