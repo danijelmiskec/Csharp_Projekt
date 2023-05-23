@@ -24,29 +24,31 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.BurgerPictureBox = new System.Windows.Forms.PictureBox();
             this.PommesPictureBox = new System.Windows.Forms.PictureBox();
             this.DessertPictureBox = new System.Windows.Forms.PictureBox();
             this.DrinkPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.LbPriprema = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LbPredaja = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DessertPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // LogoPictureBox
             // 
-            this.pictureBox1.Image = global::Projekt.Properties.Resources.output_onlinepngtools;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.LogoPictureBox, "LogoPictureBox");
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.TabStop = false;
             // 
             // BurgerPictureBox
             // 
             this.BurgerPictureBox.BackColor = System.Drawing.Color.White;
-            this.BurgerPictureBox.Image = global::Projekt.Properties.Resources.Burger;
             resources.ApplyResources(this.BurgerPictureBox, "BurgerPictureBox");
             this.BurgerPictureBox.Name = "BurgerPictureBox";
             this.BurgerPictureBox.TabStop = false;
@@ -55,7 +57,6 @@
             // PommesPictureBox
             // 
             this.PommesPictureBox.BackColor = System.Drawing.Color.White;
-            this.PommesPictureBox.Image = global::Projekt.Properties.Resources.Pommes;
             resources.ApplyResources(this.PommesPictureBox, "PommesPictureBox");
             this.PommesPictureBox.Name = "PommesPictureBox";
             this.PommesPictureBox.TabStop = false;
@@ -64,7 +65,6 @@
             // DessertPictureBox
             // 
             this.DessertPictureBox.BackColor = System.Drawing.Color.White;
-            this.DessertPictureBox.Image = global::Projekt.Properties.Resources.Dessert;
             resources.ApplyResources(this.DessertPictureBox, "DessertPictureBox");
             this.DessertPictureBox.Name = "DessertPictureBox";
             this.DessertPictureBox.TabStop = false;
@@ -73,40 +73,78 @@
             // DrinkPictureBox
             // 
             this.DrinkPictureBox.BackColor = System.Drawing.Color.White;
-            this.DrinkPictureBox.Image = global::Projekt.Properties.Resources.Drink;
             resources.ApplyResources(this.DrinkPictureBox, "DrinkPictureBox");
             this.DrinkPictureBox.Name = "DrinkPictureBox";
             this.DrinkPictureBox.TabStop = false;
             this.DrinkPictureBox.Click += new System.EventHandler(this.DrinkPictureBox_Click);
+            // 
+            // LbPriprema
+            // 
+            this.LbPriprema.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.LbPriprema, "LbPriprema");
+            this.LbPriprema.ForeColor = System.Drawing.SystemColors.Window;
+            this.LbPriprema.FormattingEnabled = true;
+            this.LbPriprema.Name = "LbPriprema";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Name = "label2";
+            // 
+            // LbPredaja
+            // 
+            this.LbPredaja.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.LbPredaja, "LbPredaja");
+            this.LbPredaja.ForeColor = System.Drawing.SystemColors.Window;
+            this.LbPredaja.FormattingEnabled = true;
+            this.LbPredaja.Name = "LbPredaja";
             // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LbPredaja);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LbPriprema);
             this.Controls.Add(this.DrinkPictureBox);
             this.Controls.Add(this.DessertPictureBox);
             this.Controls.Add(this.PommesPictureBox);
             this.Controls.Add(this.BurgerPictureBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LogoPictureBox);
             this.Name = "StartForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DessertPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.PictureBox BurgerPictureBox;
         private System.Windows.Forms.PictureBox PommesPictureBox;
         private System.Windows.Forms.PictureBox DessertPictureBox;
         private System.Windows.Forms.PictureBox DrinkPictureBox;
+        private System.Windows.Forms.ListBox LbPriprema;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox LbPredaja;
     }
 }
 

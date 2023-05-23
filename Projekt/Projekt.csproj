@@ -70,6 +70,11 @@
     <Compile Include="PommesForm.Designer.cs">
       <DependentUpon>PommesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,14 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,16 +120,7 @@
     <None Include="Resources\output-onlinepngtools.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Burgers.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Desserts.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\diskette.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Drinks.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-create-24.png" />
@@ -150,7 +141,28 @@
     <None Include="Resources\Drink.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <None Include="Properties\Resources\Burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Dessert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Drink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\icons8-create-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Pommes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\trash %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
