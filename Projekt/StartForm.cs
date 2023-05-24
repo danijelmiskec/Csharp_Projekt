@@ -12,7 +12,12 @@ namespace Projekt {
     public partial class StartForm : Form {
         public StartForm() {
             InitializeComponent();
+            UsernameLbl.Hide();
+            UsernameTb.Hide();
+            PasswordLbl.Hide();
+            PasswordTb.Hide();
         }
+        
 
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
             var burgerForm = new BurgersForm();
@@ -39,10 +44,17 @@ namespace Projekt {
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e) {
-            var caffeForm = new CaffeForm();
+        private void CoffeePictureBox_Click(object sender, EventArgs e) {
+            var caffeForm = new CoffeeForm();
             caffeForm.ShowDialog();
             this.Close();
+        }
+
+        private void AdminLoginBtn_Click(object sender, EventArgs e) {
+            UsernameLbl.Show();
+            UsernameTb.Show();
+            PasswordLbl.Show();
+            PasswordTb.Show();
         }
     }
 }

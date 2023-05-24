@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projekt {
-    public partial class CaffeForm : Form {
-        public CaffeForm() {
+    public partial class CoffeeForm : Form {
+        public CoffeeForm() {
             InitializeComponent();
         }
 
