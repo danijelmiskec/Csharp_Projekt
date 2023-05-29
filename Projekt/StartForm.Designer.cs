@@ -44,6 +44,7 @@
             this.PasswordLbl = new System.Windows.Forms.Label();
             this.PasswordTb = new System.Windows.Forms.TextBox();
             this.UsernameTb = new System.Windows.Forms.TextBox();
+            this.AddProductBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).BeginInit();
@@ -187,11 +188,19 @@
             resources.ApplyResources(this.UsernameTb, "UsernameTb");
             this.UsernameTb.Name = "UsernameTb";
             // 
+            // AddProductBtn
+            // 
+            resources.ApplyResources(this.AddProductBtn, "AddProductBtn");
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.UseVisualStyleBackColor = true;
+            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click);
+            // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
+            this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.UsernameTb);
             this.Controls.Add(this.PasswordTb);
             this.Controls.Add(this.PasswordLbl);
@@ -247,6 +256,7 @@
         private System.Windows.Forms.Label PasswordLbl;
         private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.TextBox UsernameTb;
+        private System.Windows.Forms.Button AddProductBtn;
     }
 }
 

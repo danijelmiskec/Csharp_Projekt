@@ -11,12 +11,14 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class StartForm : Form {
         private Admins Admins = new Admins();
+
         public StartForm() {
             InitializeComponent();
             UsernameLbl.Hide();
             UsernameTb.Hide();
             PasswordLbl.Hide();
             PasswordTb.Hide();
+            AddProductBtn.Hide();
         }
 
 
@@ -51,28 +53,40 @@ namespace Projekt {
             this.Close();
         }
 
+        //Button za prijavu admina
         private void AdminLoginBtn_Click(object sender, EventArgs e) {
+            
+            //provjera dal su username i password textBox vidljivi
             if (UsernameTb.Visible) {
+                
+                //provjera da li su prazni textBox-ovi za username i password
                 if ((UsernameTb.Text == null || UsernameTb.Text == string.Empty) || (PasswordTb.Text == null || PasswordTb.Text == string.Empty)) {
                     MessageBox.Show("Niste unjeli username ili password!!",
                                     "Greska kod prijave",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                 } else {
+                    int brojacGresaka = 0;
+                    //Provjera username i password za svaki admin zapis u tablici
                     foreach (var a in Admins.GetAdmins()) {
                         if ((a.Username.Equals(UsernameTb.Text)) && (a.Password.Equals(PasswordTb.Text))) {
                             MessageBox.Show("Uspjesna prijava!!",
                                             "Uspjesna prijava",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information);
+                            AddProductBtn.Show();
+                            brojacGresaka = 0;
                             break;
                         } else {
-                            MessageBox.Show("Pogrešan username ili password!!",
-                                            "Greska kod prijave",
-                                            MessageBoxButtons.OK,
-                                            MessageBoxIcon.Warning);
+                          brojacGresaka++;
                         }
 
+                    }
+                    if(brojacGresaka > 0) {
+                        MessageBox.Show("Pogrešan username ili password!!",
+                                        "Greska kod prijave",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
                     }
 
                 }
@@ -88,6 +102,10 @@ namespace Projekt {
 
         }
 
-
+        private void AddProductBtn_Click(object sender, EventArgs e) {
+            var AddProductForm = new AddProductForm();
+            AddProductForm.ShowDialog();
+            this.Close();
+        }
     }
 }
