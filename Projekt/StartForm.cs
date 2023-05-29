@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Projekt {
     public partial class StartForm : Form {
+        private Admins Admins = new Admins();
         public StartForm() {
             InitializeComponent();
             UsernameLbl.Hide();
@@ -17,13 +18,13 @@ namespace Projekt {
             PasswordLbl.Hide();
             PasswordTb.Hide();
         }
-        
+
 
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
             var burgerForm = new BurgersForm();
             burgerForm.ShowDialog();
             this.Close();
-            
+
         }
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
@@ -51,10 +52,42 @@ namespace Projekt {
         }
 
         private void AdminLoginBtn_Click(object sender, EventArgs e) {
-            UsernameLbl.Show();
-            UsernameTb.Show();
-            PasswordLbl.Show();
-            PasswordTb.Show();
+            if (UsernameTb.Visible) {
+                if ((UsernameTb.Text == null || UsernameTb.Text == string.Empty) || (PasswordTb.Text == null || PasswordTb.Text == string.Empty)) {
+                    MessageBox.Show("Niste unjeli username ili password!!",
+                                    "Greska kod prijave",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                } else {
+                    foreach (var a in Admins.GetAdmins()) {
+                        if ((a.Username.Equals(UsernameTb.Text)) && (a.Password.Equals(PasswordTb.Text))) {
+                            MessageBox.Show("Uspjesna prijava!!",
+                                            "Uspjesna prijava",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                            break;
+                        } else {
+                            MessageBox.Show("Pogrešan username ili password!!",
+                                            "Greska kod prijave",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Warning);
+                        }
+
+                    }
+
+                }
+
+            } else {
+                UsernameLbl.Show();
+                UsernameTb.Show();
+                PasswordLbl.Show();
+                PasswordTb.Show();
+            }
+
+
+
         }
+
+
     }
 }

@@ -1987,7 +1987,7 @@
     <value>5</value>
   </data>
   <data name="AdminLoginBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1786, 973</value>
+    <value>1786, 975</value>
   </data>
   <data name="AdminLoginBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 48</value>
@@ -2017,7 +2017,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="UsernameLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1363, 973</value>
+    <value>1364, 975</value>
   </data>
   <data name="UsernameLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 25</value>
@@ -2050,7 +2050,7 @@
     <value>NoControl</value>
   </data>
   <data name="PasswordLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1569, 971</value>
+    <value>1570, 973</value>
   </data>
   <data name="PasswordLbl.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 25</value>
@@ -2074,7 +2074,7 @@
     <value>2</value>
   </data>
   <data name="PasswordTb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1574, 999</value>
+    <value>1575, 1001</value>
   </data>
   <data name="PasswordTb.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 22</value>
@@ -2095,7 +2095,7 @@
     <value>1</value>
   </data>
   <data name="UsernameTb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1368, 999</value>
+    <value>1369, 1001</value>
   </data>
   <data name="UsernameTb.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 22</value>
