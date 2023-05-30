@@ -13,11 +13,15 @@ namespace Projekt
         {
             Lists = new HashSet<List>();
         }
+        /*public Product(string name, int price,int preparingTime,int categoryID) {
+            this.Name = name;
+            this.Price = price;
+            this.PreparingTime = preparingTime;
+            this.CategoryID = categoryID;
+        }*/
 
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
         public string Name { get; set; }
 
         public int? Price { get; set; }

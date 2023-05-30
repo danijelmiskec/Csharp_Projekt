@@ -12,12 +12,25 @@ namespace Projekt {
         public ProductCategorys() {
             db = new AppContext();
         }
-        public IEnumerable<ProductCategory> GetProductCategories(int id) {
+        public IEnumerable<ProductCategory> GetProductCategories() {
             return
+              from n in db.ProductCategorys
+              orderby n.ID
+              select n;
+              
+        }
+        //pretraga kategorije pomocu id-a
+        public ProductCategory GetProductCategory(int id) {
+            var category =
               from n in db.ProductCategorys
               where n.ID == id
               select n;
-              
+
+            if (!category.Any()) {
+                return null;
+            }
+
+            return category.First();
         }
     }
 }

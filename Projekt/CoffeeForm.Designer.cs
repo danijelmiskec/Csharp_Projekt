@@ -26,6 +26,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoffeeForm));
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,15 +51,24 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // CaffeForm
+            // FlowLayoutPanel
+            // 
+            this.FlowLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FlowLayoutPanel.Location = new System.Drawing.Point(11, 88);
+            this.FlowLayoutPanel.Name = "FlowLayoutPanel";
+            this.FlowLayoutPanel.Size = new System.Drawing.Size(1881, 856);
+            this.FlowLayoutPanel.TabIndex = 9;
+            // 
+            // CoffeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.FlowLayoutPanel);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.BackBtn);
-            this.Name = "CaffeForm";
+            this.Name = "CoffeeForm";
             this.Text = "CaffeForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
@@ -70,5 +80,6 @@
 
         private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
     }
 }

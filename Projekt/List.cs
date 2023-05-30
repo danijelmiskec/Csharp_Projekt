@@ -16,7 +16,7 @@ namespace Projekt
 
         public int Amount { get; set; }
 
-        public int SizeID { get; set; }
+        public int? SizeID { get; set; }
 
         public virtual Product Product { get; set; }
 

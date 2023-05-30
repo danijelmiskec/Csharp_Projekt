@@ -12,6 +12,8 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class AddProductForm : Form {
         private ProductCategorys productCategorys = new ProductCategorys();
+        private Product product;
+        private ProductCategory category = new ProductCategory();
         public AddProductForm() {
             InitializeComponent();
             ProductCategoryLbl.Hide();
@@ -24,81 +26,77 @@ namespace Projekt {
             InsertUpdateBtn.Hide();
         }
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
-            foreach (var c in productCategorys.GetProductCategories(5)) {
-                NameLbl.Show();
-                NameTb.Show();
-                PriceLbl.Show();
-                PriceTb.Show();
-                ProductCategoryLbl.Show();
-                PreparingTimeTb.Show();
-                InsertUpdateBtn.Show();
-                ProductCategoryLbl.Text = c.Name;
-
-
-            }
+            var category = new ProductCategory();
+            category = productCategorys.GetProductCategory(5);
+            NameLbl.Show();
+            NameTb.Show();
+            PriceLbl.Show();
+            PriceTb.Show();
+            ProductCategoryLbl.Show();
+            PreparingTimeLbl.Show();
+            PreparingTimeTb.Show();
+            InsertUpdateBtn.Show();
+            ProductCategoryLbl.Text = category.Name;
         }
 
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
-            foreach (var c in productCategorys.GetProductCategories(7)) {
-                NameLbl.Show();
-                NameTb.Show();
-                PriceLbl.Show();
-                PriceTb.Show();
-                ProductCategoryLbl.Show();
-                PreparingTimeTb.Show();
-                InsertUpdateBtn.Show();
-                ProductCategoryLbl.Text = c.Name;
-            }
+            category = productCategorys.GetProductCategory(7);
+            NameLbl.Show();
+            NameTb.Show();
+            PriceLbl.Show();
+            PriceTb.Show();
+            ProductCategoryLbl.Show();
+            PreparingTimeLbl.Show();
+            PreparingTimeTb.Show();
+            InsertUpdateBtn.Show();
+            ProductCategoryLbl.Text = category.Name;
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
-            foreach (var c in productCategorys.GetProductCategories(9)) {
-                NameLbl.Show();
-                NameTb.Show();
-                PriceLbl.Show();
-                PriceTb.Show();
-                ProductCategoryLbl.Show();
-                PreparingTimeTb.Show();
-                InsertUpdateBtn.Show();
-                ProductCategoryLbl.Text = c.Name;
-            }
+            category = productCategorys.GetProductCategory(9);
+            NameLbl.Show();
+            NameTb.Show();
+            PriceLbl.Show();
+            PriceTb.Show();
+            ProductCategoryLbl.Show();
+            PreparingTimeLbl.Show();
+            PreparingTimeTb.Show();
+            InsertUpdateBtn.Show();
+            ProductCategoryLbl.Text = category.Name;
+
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
-            foreach (var c in productCategorys.GetProductCategories(8)) {
-                NameLbl.Show();
-                NameTb.Show();
-                PriceLbl.Show();
-                PriceTb.Show();
-                ProductCategoryLbl.Show();
-                PreparingTimeTb.Show();
-                InsertUpdateBtn.Show();
-                ProductCategoryLbl.Text = c.Name;
-            }
-
+            category = productCategorys.GetProductCategory(8);
+            NameLbl.Show();
+            NameTb.Show();
+            PriceLbl.Show();
+            PriceTb.Show();
+            ProductCategoryLbl.Show();
+            PreparingTimeLbl.Show();
+            PreparingTimeTb.Show();
+            InsertUpdateBtn.Show();
+            ProductCategoryLbl.Text = category.Name;
         }
         private void CoffeePictureBox_Click(object sender, EventArgs e) {
-            foreach (var c in productCategorys.GetProductCategories(10)) {
-                NameLbl.Show();
-                NameTb.Show();
-                PriceLbl.Show();
-                PriceTb.Show();
-                ProductCategoryLbl.Show();
-                PreparingTimeTb.Show();
-                InsertUpdateBtn.Show();
-                ProductCategoryLbl.Text = c.Name;
-            }
+            category = productCategorys.GetProductCategory(10);
+            NameLbl.Show();
+            NameTb.Show();
+            PriceLbl.Show();
+            PriceTb.Show();
+            ProductCategoryLbl.Show();
+            PreparingTimeLbl.Show();
+            PreparingTimeTb.Show();
+            InsertUpdateBtn.Show();
+            ProductCategoryLbl.Text = category.Name;
         }
-
-
-
-
         private void BackBtn_Click(object sender, EventArgs e) {
             var startform = new StartForm();
             startform.ShowDialog();
             this.Close();
         }
+
 
         private void InsertUpdateBtn_Click(object sender, EventArgs e) {
             if ((NameTb.Text == null || NameTb.Text == string.Empty) || (PreparingTimeTb.Text == null || PreparingTimeTb.Text == string.Empty) || (PriceTb.Text == null || PriceTb.Text == string.Empty)) {
@@ -106,13 +104,10 @@ namespace Projekt {
                                 "Greska kod unosa",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
-
             } else {
 
             }
         }
-
-
     }
 }
 

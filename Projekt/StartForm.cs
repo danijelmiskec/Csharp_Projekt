@@ -55,10 +55,10 @@ namespace Projekt {
 
         //Button za prijavu admina
         private void AdminLoginBtn_Click(object sender, EventArgs e) {
-            
+
             //provjera dal su username i password textBox vidljivi
             if (UsernameTb.Visible) {
-                
+
                 //provjera da li su prazni textBox-ovi za username i password
                 if ((UsernameTb.Text == null || UsernameTb.Text == string.Empty) || (PasswordTb.Text == null || PasswordTb.Text == string.Empty)) {
                     MessageBox.Show("Niste unjeli username ili password!!",
@@ -66,40 +66,26 @@ namespace Projekt {
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                 } else {
-                    int brojacGresaka = 0;
                     //Provjera username i password za svaki admin zapis u tablici
-                    foreach (var a in Admins.GetAdmins()) {
-                        if ((a.Username.Equals(UsernameTb.Text)) && (a.Password.Equals(PasswordTb.Text))) {
-                            MessageBox.Show("Uspjesna prijava!!",
+                    if (Admins.GetAdmin(UsernameTb.Text, PasswordTb.Text) != null) {
+                        MessageBox.Show("Uspjesna prijava!!",
                                             "Uspjesna prijava",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Information);
-                            AddProductBtn.Show();
-                            brojacGresaka = 0;
-                            break;
-                        } else {
-                          brojacGresaka++;
-                        }
-
-                    }
-                    if(brojacGresaka > 0) {
+                        AddProductBtn.Show();
+                    } else {
                         MessageBox.Show("Pogrešan username ili password!!",
                                         "Greska kod prijave",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
                     }
-
                 }
-
             } else {
                 UsernameLbl.Show();
                 UsernameTb.Show();
                 PasswordLbl.Show();
                 PasswordTb.Show();
             }
-
-
-
         }
 
         private void AddProductBtn_Click(object sender, EventArgs e) {

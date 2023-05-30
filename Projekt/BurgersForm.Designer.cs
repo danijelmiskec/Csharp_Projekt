@@ -26,11 +26,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BurgersForm));
             this.BackButton = new System.Windows.Forms.Button();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
+            this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // BackButton
             // 
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.BackButton.Location = new System.Drawing.Point(12, 971);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(190, 50);
@@ -49,15 +51,24 @@
             this.LogoPictureBox.TabIndex = 6;
             this.LogoPictureBox.TabStop = false;
             // 
+            // FlowLayoutPanel
+            // 
+            this.FlowLayoutPanel.Location = new System.Drawing.Point(12, 109);
+            this.FlowLayoutPanel.Name = "FlowLayoutPanel";
+            this.FlowLayoutPanel.Size = new System.Drawing.Size(1881, 856);
+            this.FlowLayoutPanel.TabIndex = 7;
+            // 
             // BurgersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.FlowLayoutPanel);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.BackButton);
             this.Name = "BurgersForm";
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "BurgersForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.PictureBox LogoPictureBox;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
     }
 }

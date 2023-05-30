@@ -12,11 +12,14 @@ namespace Projekt {
         public Admins() {
             db = new AppContext();
         }
-        public IEnumerable<Admin> GetAdmins() {
-            return
-              from n in db.Admins
-              orderby n.Id
-              select n;
+        public Admin GetAdmin(string username, string password) {
+            try {
+                return (
+                  from n in db.Admins
+                  where n.Username == username && n.Password == password
+                  select n).First();
+            }
+            catch { return null; }
         }
     }
 }
