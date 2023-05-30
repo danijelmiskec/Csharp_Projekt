@@ -1,4 +1,6 @@
-﻿namespace Projekt {
+﻿using System.Drawing;
+
+namespace Projekt {
     partial class AddProductForm {
         /// <summary>
         /// Required designer variable.
@@ -67,7 +69,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(218, 404);
@@ -79,7 +81,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(5, 404);
@@ -91,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(5, 674);
@@ -103,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(211, 136);
@@ -115,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(5, 136);

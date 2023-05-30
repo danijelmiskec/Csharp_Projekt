@@ -1,4 +1,6 @@
-﻿namespace Projekt {
+﻿using System.Drawing;
+
+namespace Projekt {
     partial class CoffeeForm {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +30,11 @@
             this.BackBtn = new System.Windows.Forms.Button();
             this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ProductCategoryLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DownAmountBtn = new System.Windows.Forms.Button();
+            this.UpAmountBtn = new System.Windows.Forms.Button();
+            this.AmountTb = new System.Windows.Forms.TextBox();
+            this.Productlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,22 +61,74 @@
             // 
             // FlowLayoutPanel
             // 
-            this.FlowLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.FlowLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.FlowLayoutPanel.Location = new System.Drawing.Point(11, 88);
             this.FlowLayoutPanel.Name = "FlowLayoutPanel";
-            this.FlowLayoutPanel.Size = new System.Drawing.Size(1881, 856);
+            this.FlowLayoutPanel.Size = new System.Drawing.Size(600, 856);
             this.FlowLayoutPanel.TabIndex = 9;
             // 
             // ProductCategoryLbl
             // 
             this.ProductCategoryLbl.AutoSize = true;
-            this.ProductCategoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ProductCategoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ProductCategoryLbl.ForeColor = System.Drawing.SystemColors.Window;
             this.ProductCategoryLbl.Location = new System.Drawing.Point(183, 39);
             this.ProductCategoryLbl.Name = "ProductCategoryLbl";
-            this.ProductCategoryLbl.Size = new System.Drawing.Size(112, 32);
+            this.ProductCategoryLbl.Size = new System.Drawing.Size(119, 32);
             this.ProductCategoryLbl.TabIndex = 40;
             this.ProductCategoryLbl.Text = "Coffees";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(702, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 32);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Amount";
+            // 
+            // DownAmountBtn
+            // 
+            this.DownAmountBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DownAmountBtn.Location = new System.Drawing.Point(654, 217);
+            this.DownAmountBtn.Name = "DownAmountBtn";
+            this.DownAmountBtn.Size = new System.Drawing.Size(48, 30);
+            this.DownAmountBtn.TabIndex = 44;
+            this.DownAmountBtn.Text = "-";
+            this.DownAmountBtn.UseVisualStyleBackColor = true;
+            this.DownAmountBtn.Click += new System.EventHandler(this.DownAmountBtn_Click);
+            // 
+            // UpAmountBtn
+            // 
+            this.UpAmountBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UpAmountBtn.Location = new System.Drawing.Point(826, 217);
+            this.UpAmountBtn.Name = "UpAmountBtn";
+            this.UpAmountBtn.Size = new System.Drawing.Size(48, 30);
+            this.UpAmountBtn.TabIndex = 43;
+            this.UpAmountBtn.Text = "+";
+            this.UpAmountBtn.UseVisualStyleBackColor = true;
+            this.UpAmountBtn.Click += new System.EventHandler(this.UpAmountBtn_Click);
+            // 
+            // AmountTb
+            // 
+            this.AmountTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AmountTb.Location = new System.Drawing.Point(708, 217);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(112, 30);
+            this.AmountTb.TabIndex = 42;
+            // 
+            // Productlbl
+            // 
+            this.Productlbl.AutoSize = true;
+            this.Productlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Productlbl.ForeColor = System.Drawing.SystemColors.Window;
+            this.Productlbl.Location = new System.Drawing.Point(649, 142);
+            this.Productlbl.Name = "Productlbl";
+            this.Productlbl.Size = new System.Drawing.Size(70, 25);
+            this.Productlbl.TabIndex = 46;
+            this.Productlbl.Text = "label1";
             // 
             // CoffeeForm
             // 
@@ -77,8 +136,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.Productlbl);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DownAmountBtn);
             this.Controls.Add(this.ProductCategoryLbl);
+            this.Controls.Add(this.UpAmountBtn);
             this.Controls.Add(this.FlowLayoutPanel);
+            this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.BackBtn);
             this.Name = "CoffeeForm";
@@ -96,5 +160,10 @@
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
         private System.Windows.Forms.Label ProductCategoryLbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button DownAmountBtn;
+        private System.Windows.Forms.Button UpAmountBtn;
+        private System.Windows.Forms.TextBox AmountTb;
+        private System.Windows.Forms.Label Productlbl;
     }
 }

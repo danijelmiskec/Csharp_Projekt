@@ -11,8 +11,14 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class CoffeeForm : Form {
         private Products products = new Products();
+        int amount;
         public CoffeeForm() {
             InitializeComponent();
+            AmountTb.Hide();
+            label2.Hide();
+            UpAmountBtn.Hide();
+            DownAmountBtn.Hide();
+            Productlbl.Hide();
             generateButton();
         }
 
@@ -25,16 +31,25 @@ namespace Projekt {
                 button.Click += Button_Click; // Dodaje događaj klika na gumb
                 System.Drawing.Size customSize = new System.Drawing.Size(120, 50);
                 button.Size = customSize;
-                button.Font = new Font("Microsoft Sans Serif", 12);
+                button.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                button.ForeColor = Color.White;
                 button.Tag = p;
 
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
             }
         }
+        //funkcija za svaki dinamicki stvoren button
         private void Button_Click(object sender, EventArgs e) {
             Button clickedButton = (Button)sender;
-            Product objekt = (Product)clickedButton.Tag;
-            MessageBox.Show(objekt.ID + " " + objekt.Name);
+            Product product = (Product)clickedButton.Tag;
+            amount = 1;
+            AmountTb.Show();
+            label2.Show();
+            UpAmountBtn.Show();
+            DownAmountBtn.Show();
+            Productlbl.Show();
+            Productlbl.Text = product.Name;
+            AmountTb.Text = amount.ToString();
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
@@ -43,6 +58,16 @@ namespace Projekt {
             this.Close();
         }
 
+        private void UpAmountBtn_Click(object sender, EventArgs e) {
+            amount++;
+            AmountTb.Text = amount.ToString();
+        }
 
+        private void DownAmountBtn_Click(object sender, EventArgs e) {
+            if (amount > 1) {
+                amount--;
+            }
+            AmountTb.Text = amount.ToString();
+        }
     }
 }

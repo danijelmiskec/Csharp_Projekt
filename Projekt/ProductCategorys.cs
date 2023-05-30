@@ -19,6 +19,17 @@ namespace Projekt {
               select n;
               
         }
+
+        /*
+        public IEnumerable<ProductCategory> GetProductCategories(int id) {
+            return
+              from n in db.ProductCategorys
+              where n.ID != id
+              select n;
+        
+        }*/
+
+
         //pretraga kategorije pomocu id-a
         public ProductCategory GetProductCategory(int id) {
             var category =

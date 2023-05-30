@@ -25,7 +25,8 @@ namespace Projekt {
                 button.Click += Button_Click; // Dodaje događaj klika na gumb
                 System.Drawing.Size customSize = new System.Drawing.Size(120, 50);
                 button.Size = customSize;
-                button.Font = new Font("Microsoft Sans Serif", 12);
+                button.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+                button.ForeColor = Color.White;
                 button.Tag = p;
 
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
