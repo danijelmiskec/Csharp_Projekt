@@ -13,6 +13,7 @@ namespace Projekt {
     public partial class AddProductForm : Form {
         private ProductCategorys productCategorys = new ProductCategorys();
         private Product product;
+        private Products products = new Products();
         private ProductCategory category = new ProductCategory();
         public AddProductForm() {
             InitializeComponent();
@@ -104,8 +105,18 @@ namespace Projekt {
                                 "Greska kod unosa",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
-            } else {
-
+            } else {/*
+                if (product != null) {
+                    product.Name = NameTb.Text;
+                    product.Price = int.Parse(PriceTb.Text);
+                    product.PreparingTime = int.Parse(PreparingTimeTb.Text);
+                    product.CategoryID = category.ID;
+                    products.UpdateNote(product);
+                } else {*/
+                    product = new Product(NameTb.Text, int.Parse(PriceTb.Text), int.Parse(PreparingTimeTb.Text), category.ID);
+                    products.UpdateNote(product);
+                //}
+                
             }
         }
     }

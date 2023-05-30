@@ -18,11 +18,7 @@ namespace Projekt {
 
         private void generateButton() {
             FlowLayoutPanel.Controls.Clear(); // Briše prethodno generirane gumbe
-
-            // Dohvati podatke iz baze podataka i generiraj gumbe
-            // Ovdje ide vaš kod za dohvaćanje podataka iz baze podataka
-
-            // Primjer generiranja gumbova
+            //generiranje gumbova
             foreach (Product p in products.GetProducts(8)) {
                 Button button = new Button();
                 button.Text = p.Name;
@@ -30,13 +26,15 @@ namespace Projekt {
                 System.Drawing.Size customSize = new System.Drawing.Size(120, 50);
                 button.Size = customSize;
                 button.Font = new Font("Microsoft Sans Serif", 12);
-
+                button.Tag = p;
 
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
             }
         }
         private void Button_Click(object sender, EventArgs e) {
-            MessageBox.Show("da");
+            Button clickedButton = (Button)sender;
+            Product objekt = (Product)clickedButton.Tag;
+            MessageBox.Show(objekt.ID + " " + objekt.Name);
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
