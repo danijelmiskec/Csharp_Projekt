@@ -12,14 +12,17 @@ namespace Projekt {
     public partial class CoffeeForm : Form {
         private Products products = new Products();
         int amount;
-        public CoffeeForm() {
+        List list1 = new List();
+        public CoffeeForm(List list) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
             UpAmountBtn.Hide();
             DownAmountBtn.Hide();
             Productlbl.Hide();
+            AddToOrderBtn.Hide();
             generateButton();
+            list1 = list;
         }
 
         private void generateButton() {
@@ -38,6 +41,7 @@ namespace Projekt {
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
             }
         }
+
         //funkcija za svaki dinamicki stvoren button
         private void Button_Click(object sender, EventArgs e) {
             Button clickedButton = (Button)sender;
@@ -48,12 +52,13 @@ namespace Projekt {
             UpAmountBtn.Show();
             DownAmountBtn.Show();
             Productlbl.Show();
+            AddToOrderBtn.Show();
             Productlbl.Text = product.Name;
             AmountTb.Text = amount.ToString();
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm();
+            var startform = new StartForm(list1);
             startform.ShowDialog();
             this.Close();
         }
@@ -68,6 +73,10 @@ namespace Projekt {
                 amount--;
             }
             AmountTb.Text = amount.ToString();
+        }
+
+        private void AddToOrderBtn_Click(object sender, EventArgs e) {
+
         }
     }
 }

@@ -20,6 +20,10 @@ namespace Projekt
             this.CategoryID = categoryID;
         }
 
+        public override string ToString() {
+            return Name;
+        }
+
         public int? ID { get; set; }
 
         public string Name { get; set; }

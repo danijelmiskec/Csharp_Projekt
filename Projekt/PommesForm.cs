@@ -11,9 +11,14 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class PommesForm : Form {
         private Products products = new Products();
-        public PommesForm() {
+        int amount;
+        List list1 = new List();
+        public PommesForm(List list) {
             InitializeComponent();
             generateButton();
+            amount = 1;
+            AmountTb.Text = amount.ToString();
+            list1 = list;
         }
 
         private void generateButton() {
@@ -28,10 +33,10 @@ namespace Projekt {
                 button.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
                 button.ForeColor = Color.White;
                 button.Tag = p;
-
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
             }
         }
+
         private void Button_Click(object sender, EventArgs e) {
             Button clickedButton = (Button)sender;
             Product objekt = (Product)clickedButton.Tag;
@@ -39,9 +44,26 @@ namespace Projekt {
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm();
+            var startform = new StartForm(list1);
             startform.ShowDialog();
             this.Close();
+        }
+
+        private void UpAmountBtn_Click(object sender, EventArgs e) {
+            amount++;
+            AmountTb.Text = amount.ToString();
+        }
+
+        //button za smanjenje broja proizvoda 
+        private void DownAmountBtn_Click(object sender, EventArgs e) {
+            if (amount > 1) {
+                amount--;
+            }
+            AmountTb.Text = amount.ToString();
+        }
+
+        private void AddToOrderBtn_Click(object sender, EventArgs e) {
+
         }
     }
 }

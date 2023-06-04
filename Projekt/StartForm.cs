@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class StartForm : Form {
         private Admins Admins = new Admins();
-
+        List list = new List();
         public StartForm() {
             InitializeComponent();
             UsernameLbl.Hide();
@@ -21,44 +21,50 @@ namespace Projekt {
             AddProductBtn.Hide();
         }
 
+        public StartForm(List list) {
+            InitializeComponent();
+            UsernameLbl.Hide();
+            UsernameTb.Hide();
+            PasswordLbl.Hide();
+            PasswordTb.Hide();
+            AddProductBtn.Hide();
+            this.list = list;
+        }
 
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
-            var burgerForm = new BurgersForm();
+            var burgerForm = new BurgersForm(list);
             burgerForm.ShowDialog();
             this.Close();
-
         }
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
-            var pommesForm = new PommesForm();
+            var pommesForm = new PommesForm(list);
             pommesForm.ShowDialog();
             this.Close();
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
-            var dessertsForm = new DessertsForm();
+            var dessertsForm = new DessertsForm(list);
             dessertsForm.ShowDialog();
             this.Close();
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
-            var drinksForm = new DrinksForm();
+            var drinksForm = new DrinksForm(list);
             drinksForm.ShowDialog();
             this.Close();
         }
 
         private void CoffeePictureBox_Click(object sender, EventArgs e) {
-            var caffeForm = new CoffeeForm();
+            var caffeForm = new CoffeeForm(list);
             caffeForm.ShowDialog();
             this.Close();
         }
 
         //Button za prijavu admina
         private void AdminLoginBtn_Click(object sender, EventArgs e) {
-
             //provjera dal su username i password textBox vidljivi
             if (UsernameTb.Visible) {
-
                 //provjera da li su prazni textBox-ovi za username i password
                 if ((UsernameTb.Text == null || UsernameTb.Text == string.Empty) || (PasswordTb.Text == null || PasswordTb.Text == string.Empty)) {
                     MessageBox.Show("Niste unjeli username ili password!!",
@@ -68,16 +74,14 @@ namespace Projekt {
                 } else {
                     //Provjera username i password za svaki admin zapis u tablici
                     if (Admins.GetAdmin(UsernameTb.Text, PasswordTb.Text) != null) {
-                        MessageBox.Show("Uspjesna prijava!!",
-                                            "Uspjesna prijava",
-                                            MessageBoxButtons.OK,
-                                            MessageBoxIcon.Information);
                         AddProductBtn.Show();
                     } else {
                         MessageBox.Show("Pogrešan username ili password!!",
                                         "Greska kod prijave",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
+                        UsernameTb.Clear();
+                        PasswordTb.Clear();
                     }
                 }
             } else {
@@ -92,6 +96,14 @@ namespace Projekt {
             var AddProductForm = new AddProductForm();
             AddProductForm.ShowDialog();
             this.Close();
+        }
+
+        private void EndOrderBtn_Click(object sender, EventArgs e) {
+
+        }
+
+        private void CancleOrderBtn_Click(object sender, EventArgs e) {
+
         }
     }
 }

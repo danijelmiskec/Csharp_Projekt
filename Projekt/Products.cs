@@ -26,8 +26,17 @@ namespace Projekt {
               orderby n.ID
               select n;
         }
+
+        public Product GetProduct(string name) {
+            return(
+              from n in db.Products
+              where n.Name == name
+              select n).First();
+        }
+
+
         //Update ili insert producta
-        public void UpdateNote(Product product) {
+        public void UpdateProduct(Product product) {
             db.Products.AddOrUpdate(product);
             db.SaveChanges();
             

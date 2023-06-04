@@ -8,6 +8,8 @@ namespace Projekt
 
     public partial class List
     {
+        public List() {
+        }
         public int ID { get; set; }
 
         public int OrderID { get; set; }
@@ -23,5 +25,9 @@ namespace Projekt
         public virtual Size Size { get; set; }
 
         public virtual Order Order { get; set; }
+
+        public static implicit operator List<object>(List v) {
+            throw new NotImplementedException();
+        }
     }
 }

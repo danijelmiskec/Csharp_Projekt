@@ -12,14 +12,17 @@ namespace Projekt {
     public partial class DrinksForm : Form {
         private Products products = new Products();
         int amount;
-        public DrinksForm() {
+        List list1 = new List();
+        public DrinksForm(List list) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
             UpAmountBtn.Hide();
             DownAmountBtn.Hide();
             Productlbl.Hide();
+            AddToOrderBtn.Hide();
             generateButton();
+            list1 = list;
         }
 
         private void generateButton() {
@@ -48,25 +51,33 @@ namespace Projekt {
             UpAmountBtn.Show();
             DownAmountBtn.Show();
             Productlbl.Show();
+            AddToOrderBtn.Show();
             Productlbl.Text = product.Name;
             AmountTb.Text = amount.ToString();
         }
+
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm();
+            var startform = new StartForm(list1);
             startform.ShowDialog();
             this.Close();
         }
+
         //button za povecanje broja proizvoda 
         private void UpAmountBtn_Click(object sender, EventArgs e) {
             amount++;
             AmountTb.Text = amount.ToString();
         }
+
         //button za smanjenje broja proizvoda 
         private void DownAmountBtn_Click(object sender, EventArgs e) {
             if (amount > 1) {
                 amount--;
             }
             AmountTb.Text = amount.ToString();
+        }
+
+        private void AddToOrderBtn_Click(object sender, EventArgs e) {
+
         }
     }
 }

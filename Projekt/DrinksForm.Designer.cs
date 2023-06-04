@@ -35,6 +35,7 @@ namespace Projekt {
             this.UpAmountBtn = new System.Windows.Forms.Button();
             this.AmountTb = new System.Windows.Forms.TextBox();
             this.Productlbl = new System.Windows.Forms.Label();
+            this.AddToOrderBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@ namespace Projekt {
             // UpAmountBtn
             // 
             this.UpAmountBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UpAmountBtn.Location = new System.Drawing.Point(823, 217);
+            this.UpAmountBtn.Location = new System.Drawing.Point(826, 217);
             this.UpAmountBtn.Name = "UpAmountBtn";
             this.UpAmountBtn.Size = new System.Drawing.Size(48, 30);
             this.UpAmountBtn.TabIndex = 43;
@@ -115,8 +116,9 @@ namespace Projekt {
             this.AmountTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.AmountTb.Location = new System.Drawing.Point(708, 217);
             this.AmountTb.Name = "AmountTb";
-            this.AmountTb.Size = new System.Drawing.Size(109, 30);
+            this.AmountTb.Size = new System.Drawing.Size(112, 30);
             this.AmountTb.TabIndex = 42;
+            this.AmountTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Productlbl
             // 
@@ -129,12 +131,24 @@ namespace Projekt {
             this.Productlbl.TabIndex = 47;
             this.Productlbl.Text = "label1";
             // 
+            // AddToOrderBtn
+            // 
+            this.AddToOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AddToOrderBtn.Location = new System.Drawing.Point(654, 253);
+            this.AddToOrderBtn.Name = "AddToOrderBtn";
+            this.AddToOrderBtn.Size = new System.Drawing.Size(220, 50);
+            this.AddToOrderBtn.TabIndex = 48;
+            this.AddToOrderBtn.Text = "Dodaj u narudzbu";
+            this.AddToOrderBtn.UseVisualStyleBackColor = true;
+            this.AddToOrderBtn.Click += new System.EventHandler(this.AddToOrderBtn_Click);
+            // 
             // DrinksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.AddToOrderBtn);
             this.Controls.Add(this.Productlbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DownAmountBtn);
@@ -164,5 +178,6 @@ namespace Projekt {
         private System.Windows.Forms.Button UpAmountBtn;
         private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Label Productlbl;
+        private System.Windows.Forms.Button AddToOrderBtn;
     }
 }

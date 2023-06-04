@@ -12,9 +12,10 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class AddProductForm : Form {
         private ProductCategorys productCategorys = new ProductCategorys();
-        private Product product;
-        private Products products = new Products();
         private ProductCategory category = new ProductCategory();
+        private Product product = new Product();
+        private Products products = new Products();
+        int categoryID;
         public AddProductForm() {
             InitializeComponent();
             ProductCategoryLbl.Hide();
@@ -25,10 +26,17 @@ namespace Projekt {
             PreparingTimeLbl.Hide();
             PreparingTimeTb.Hide();
             InsertUpdateBtn.Hide();
+            ProductsCb.Hide();
         }
-        private void BurgerPictureBox_Click(object sender, EventArgs e) {
-            var category = new ProductCategory();
-            category = productCategorys.GetProductCategory(5);
+
+        private void ProductsCbAdd(int categoryID) {
+            string Empty = " ";
+            ProductsCb.Items.Clear();
+            ProductsCb.Items.Add(Empty);
+            ProductsCb.Items.AddRange((products.GetProducts(categoryID)).ToArray());
+        }
+
+        private void FormElementsShow() {
             NameLbl.Show();
             NameTb.Show();
             PriceLbl.Show();
@@ -37,67 +45,54 @@ namespace Projekt {
             PreparingTimeLbl.Show();
             PreparingTimeTb.Show();
             InsertUpdateBtn.Show();
+            ProductsCb.Show();
+        }
+
+        private void BurgerPictureBox_Click(object sender, EventArgs e) {
+            categoryID = 5;
+            category = productCategorys.GetProductCategory(categoryID);
+            ProductsCbAdd(categoryID);
+            FormElementsShow();
             ProductCategoryLbl.Text = category.Name;
         }
 
-
         private void PommesPictureBox_Click(object sender, EventArgs e) {
-            category = productCategorys.GetProductCategory(7);
-            NameLbl.Show();
-            NameTb.Show();
-            PriceLbl.Show();
-            PriceTb.Show();
-            ProductCategoryLbl.Show();
-            PreparingTimeLbl.Show();
-            PreparingTimeTb.Show();
-            InsertUpdateBtn.Show();
+            categoryID = 7;
+            category = productCategorys.GetProductCategory(categoryID);
+            ProductsCbAdd(categoryID);
+            FormElementsShow();
             ProductCategoryLbl.Text = category.Name;
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
-            category = productCategorys.GetProductCategory(9);
-            NameLbl.Show();
-            NameTb.Show();
-            PriceLbl.Show();
-            PriceTb.Show();
-            ProductCategoryLbl.Show();
-            PreparingTimeLbl.Show();
-            PreparingTimeTb.Show();
-            InsertUpdateBtn.Show();
+            categoryID = 9;
+            category = productCategorys.GetProductCategory(categoryID);
+            ProductsCbAdd(categoryID);
+            FormElementsShow();
             ProductCategoryLbl.Text = category.Name;
-
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
-            category = productCategorys.GetProductCategory(8);
-            NameLbl.Show();
-            NameTb.Show();
-            PriceLbl.Show();
-            PriceTb.Show();
-            ProductCategoryLbl.Show();
-            PreparingTimeLbl.Show();
-            PreparingTimeTb.Show();
-            InsertUpdateBtn.Show();
+            categoryID = 8;
+            category = productCategorys.GetProductCategory(categoryID);
+            ProductsCbAdd(categoryID);
+            FormElementsShow();
             ProductCategoryLbl.Text = category.Name;
         }
+
         private void CoffeePictureBox_Click(object sender, EventArgs e) {
-            category = productCategorys.GetProductCategory(10);
-            NameLbl.Show();
-            NameTb.Show();
-            PriceLbl.Show();
-            PriceTb.Show();
-            ProductCategoryLbl.Show();
-            PreparingTimeLbl.Show();
-            PreparingTimeTb.Show();
-            InsertUpdateBtn.Show();
+            categoryID = 10;
+            category = productCategorys.GetProductCategory(categoryID);
+            ProductsCbAdd(categoryID);
+            FormElementsShow();
             ProductCategoryLbl.Text = category.Name;
         }
+
         private void BackBtn_Click(object sender, EventArgs e) {
             var startform = new StartForm();
             startform.ShowDialog();
             this.Close();
         }
-
 
         private void InsertUpdateBtn_Click(object sender, EventArgs e) {
             if ((NameTb.Text == null || NameTb.Text == string.Empty) || (PreparingTimeTb.Text == null || PreparingTimeTb.Text == string.Empty) || (PriceTb.Text == null || PriceTb.Text == string.Empty)) {
@@ -105,19 +100,23 @@ namespace Projekt {
                                 "Greska kod unosa",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
-            } else {/*
-                if (product != null) {
+            } else {
+                if (ProductsCb.Text != null || ProductsCb.Text == string.Empty) {
+                    product = products.GetProduct(NameTb.Text);
                     product.Name = NameTb.Text;
                     product.Price = int.Parse(PriceTb.Text);
                     product.PreparingTime = int.Parse(PreparingTimeTb.Text);
-                    product.CategoryID = category.ID;
-                    products.UpdateNote(product);
-                } else {*/
-                    product = new Product(NameTb.Text, int.Parse(PriceTb.Text), int.Parse(PreparingTimeTb.Text), category.ID);
-                    products.UpdateNote(product);
-                //}
-                
+                    product.CategoryID = categoryID;
+                    products.UpdateProduct(product);
+                } else {
+                    product = new Product(NameTb.Text, int.Parse(PriceTb.Text), int.Parse(PreparingTimeTb.Text), categoryID);
+                    products.UpdateProduct(product);
+                }               
             }
+        }
+
+        private void ProductsCb_SelectedIndexChanged(object sender, EventArgs e) {
+            NameTb.Text = ProductsCb.Text;
         }
     }
 }

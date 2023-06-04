@@ -16,9 +16,9 @@ namespace Projekt
 
         public int ID { get; set; }
 
-        public int? PriceSum { get; set; }
+        public int PriceSum { get; set; }
 
-        public int? SumPreparingTIme { get; set; }
+        public int SumPreparingTIme { get; set; }
 
         [Required]
         [StringLength(50)]

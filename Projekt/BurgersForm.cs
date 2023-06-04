@@ -12,14 +12,17 @@ namespace Projekt {
     public partial class BurgersForm : Form {
         private Products products = new Products();
         int amount;
-        public BurgersForm() {
+        List list1 = new List();
+        public BurgersForm(List list) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
             UpAmount.Hide();
             DownAmount.Hide();
             Productlbl.Hide();
+            AddToOrderBtn.Hide();
             generateButton();
+            list1 = list;
         }
 
         private void generateButton() {
@@ -34,8 +37,6 @@ namespace Projekt {
                 button.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
                 button.ForeColor = Color.White;
                 button.Tag = p;
-
-
                 FlowLayoutPanel.Controls.Add(button); // Dodaje gumb u FlowLayoutPanel
             }
         }
@@ -49,13 +50,14 @@ namespace Projekt {
             UpAmount.Show();
             DownAmount.Show();
             Productlbl.Show();
+            AddToOrderBtn.Show();
             Productlbl.Text = product.Name;
             AmountTb.Text = amount.ToString();
         }
 
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm();
+            var startform = new StartForm(list1);
             startform.ShowDialog();
             this.Close();
         }
@@ -70,6 +72,10 @@ namespace Projekt {
                 amount--;
             }
             AmountTb.Text = amount.ToString();
+        }
+
+        private void AddToOrderBtn_Click(object sender, EventArgs e) {
+
         }
     }
 }

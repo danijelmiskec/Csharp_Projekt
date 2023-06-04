@@ -28,12 +28,13 @@
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AmountTb = new System.Windows.Forms.TextBox();
             this.UpAmountBtn = new System.Windows.Forms.Button();
             this.DownAmountBtn = new System.Windows.Forms.Button();
             this.ProductCategoryLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.AddToOrderBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,13 +75,14 @@
             this.comboBox1.Size = new System.Drawing.Size(273, 33);
             this.comboBox1.TabIndex = 9;
             // 
-            // textBox1
+            // AmountTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(102, 225);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
-            this.textBox1.TabIndex = 10;
+            this.AmountTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AmountTb.Location = new System.Drawing.Point(102, 225);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(100, 30);
+            this.AmountTb.TabIndex = 10;
+            this.AmountTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UpAmountBtn
             // 
@@ -91,6 +93,7 @@
             this.UpAmountBtn.TabIndex = 11;
             this.UpAmountBtn.Text = "+";
             this.UpAmountBtn.UseVisualStyleBackColor = true;
+            this.UpAmountBtn.Click += new System.EventHandler(this.UpAmountBtn_Click);
             // 
             // DownAmountBtn
             // 
@@ -101,6 +104,7 @@
             this.DownAmountBtn.TabIndex = 12;
             this.DownAmountBtn.Text = "-";
             this.DownAmountBtn.UseVisualStyleBackColor = true;
+            this.DownAmountBtn.Click += new System.EventHandler(this.DownAmountBtn_Click);
             // 
             // ProductCategoryLbl
             // 
@@ -135,18 +139,30 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "Amount";
             // 
+            // AddToOrderBtn
+            // 
+            this.AddToOrderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AddToOrderBtn.Location = new System.Drawing.Point(341, 205);
+            this.AddToOrderBtn.Name = "AddToOrderBtn";
+            this.AddToOrderBtn.Size = new System.Drawing.Size(220, 50);
+            this.AddToOrderBtn.TabIndex = 42;
+            this.AddToOrderBtn.Text = "Dodaj u narudzbu";
+            this.AddToOrderBtn.UseVisualStyleBackColor = true;
+            this.AddToOrderBtn.Click += new System.EventHandler(this.AddToOrderBtn_Click);
+            // 
             // PommesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.AddToOrderBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProductCategoryLbl);
             this.Controls.Add(this.DownAmountBtn);
             this.Controls.Add(this.UpAmountBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.FlowLayoutPanel);
             this.Controls.Add(this.LogoPictureBox);
@@ -166,11 +182,12 @@
         private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Button UpAmountBtn;
         private System.Windows.Forms.Button DownAmountBtn;
         private System.Windows.Forms.Label ProductCategoryLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button AddToOrderBtn;
     }
 }

@@ -155,7 +155,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LogoPictureBox.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="BurgerPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -542,7 +542,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BurgerPictureBox.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="PommesPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -879,7 +879,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PommesPictureBox.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="DessertPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1200,7 +1200,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DessertPictureBox.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="DrinkPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1474,7 +1474,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DrinkPictureBox.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1486,7 +1486,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1383, 61</value>
+    <value>883, 61</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 42</value>
@@ -1507,7 +1507,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="LbPredaja.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1516,10 +1516,10 @@
     <value>25</value>
   </data>
   <data name="LbPredaja.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1390, 109</value>
+    <value>890, 109</value>
   </data>
   <data name="LbPredaja.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 829</value>
+    <value>353, 704</value>
   </data>
   <data name="LbPredaja.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1534,7 +1534,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbPredaja.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1546,7 +1546,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>848, 64</value>
+    <value>517, 61</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 42</value>
@@ -1567,7 +1567,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="LbPriprema.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -1576,10 +1576,10 @@
     <value>25</value>
   </data>
   <data name="LbPriprema.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 109</value>
+    <value>524, 106</value>
   </data>
   <data name="LbPriprema.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 829</value>
+    <value>353, 704</value>
   </data>
   <data name="LbPriprema.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1594,7 +1594,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbPriprema.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1624,7 +1624,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1657,7 +1657,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1690,7 +1690,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1723,7 +1723,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1756,7 +1756,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="CoffeePictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1984,7 +1984,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CoffeePictureBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="AdminLoginBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>1786, 975</value>
@@ -2008,7 +2008,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AdminLoginBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="UsernameLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2038,7 +2038,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UsernameLbl.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="PasswordLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2071,7 +2071,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PasswordLbl.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="PasswordTb.Location" type="System.Drawing.Point, System.Drawing">
     <value>1575, 1001</value>
@@ -2092,7 +2092,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PasswordTb.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="UsernameTb.Location" type="System.Drawing.Point, System.Drawing">
     <value>1369, 1001</value>
@@ -2113,7 +2113,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UsernameTb.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="AddProductBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2140,6 +2140,123 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AddProductBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 22.2pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1271, 61</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 42</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>TRENUTNA NARUDZBA</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CurrentOrderLb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="CurrentOrderLb.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="CurrentOrderLb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1278, 109</value>
+  </data>
+  <data name="CurrentOrderLb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>594, 704</value>
+  </data>
+  <data name="CurrentOrderLb.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;CurrentOrderLb.Name" xml:space="preserve">
+    <value>CurrentOrderLb</value>
+  </data>
+  <data name="&gt;&gt;CurrentOrderLb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentOrderLb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CurrentOrderLb.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EndOrderBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="EndOrderBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1652, 831</value>
+  </data>
+  <data name="EndOrderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 50</value>
+  </data>
+  <data name="EndOrderBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="EndOrderBtn.Text" xml:space="preserve">
+    <value>Zavrsi narudzbu</value>
+  </data>
+  <data name="&gt;&gt;EndOrderBtn.Name" xml:space="preserve">
+    <value>EndOrderBtn</value>
+  </data>
+  <data name="&gt;&gt;EndOrderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EndOrderBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EndOrderBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CancleOrderBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="CancleOrderBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CancleOrderBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1426, 831</value>
+  </data>
+  <data name="CancleOrderBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 50</value>
+  </data>
+  <data name="CancleOrderBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="CancleOrderBtn.Text" xml:space="preserve">
+    <value>Odustani</value>
+  </data>
+  <data name="&gt;&gt;CancleOrderBtn.Name" xml:space="preserve">
+    <value>CancleOrderBtn</value>
+  </data>
+  <data name="&gt;&gt;CancleOrderBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CancleOrderBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CancleOrderBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

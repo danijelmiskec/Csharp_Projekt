@@ -46,6 +46,7 @@ namespace Projekt {
             this.PreparingTimeTb = new System.Windows.Forms.TextBox();
             this.ProductCategoryLbl = new System.Windows.Forms.Label();
             this.InsertUpdateBtn = new System.Windows.Forms.Button();
+            this.ProductsCb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DrinkPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DessertPictureBox)).BeginInit();
@@ -69,60 +70,60 @@ namespace Projekt {
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(218, 404);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 42);
+            this.label7.Size = new System.Drawing.Size(143, 42);
             this.label7.TabIndex = 29;
             this.label7.Text = "Deserti";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(5, 404);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 42);
+            this.label6.Size = new System.Drawing.Size(95, 42);
             this.label6.TabIndex = 28;
             this.label6.Text = "Pića";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(5, 674);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 42);
+            this.label5.Size = new System.Drawing.Size(108, 42);
             this.label5.TabIndex = 27;
             this.label5.Text = "Kave";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(211, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 42);
+            this.label4.Size = new System.Drawing.Size(130, 42);
             this.label4.TabIndex = 26;
             this.label4.Text = "Pomfri";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(5, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 42);
+            this.label3.Size = new System.Drawing.Size(145, 42);
             this.label3.TabIndex = 25;
             this.label3.Text = "Burgeri";
             // 
@@ -198,7 +199,7 @@ namespace Projekt {
             // NameTb
             // 
             this.NameTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.NameTb.Location = new System.Drawing.Point(516, 181);
+            this.NameTb.Location = new System.Drawing.Point(516, 230);
             this.NameTb.Name = "NameTb";
             this.NameTb.Size = new System.Drawing.Size(547, 38);
             this.NameTb.TabIndex = 32;
@@ -209,7 +210,7 @@ namespace Projekt {
             this.NameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.NameLbl.ForeColor = System.Drawing.SystemColors.Window;
             this.NameLbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NameLbl.Location = new System.Drawing.Point(509, 146);
+            this.NameLbl.Location = new System.Drawing.Point(509, 195);
             this.NameLbl.Name = "NameLbl";
             this.NameLbl.Size = new System.Drawing.Size(89, 32);
             this.NameLbl.TabIndex = 33;
@@ -221,7 +222,7 @@ namespace Projekt {
             this.PriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PriceLbl.ForeColor = System.Drawing.SystemColors.Window;
             this.PriceLbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PriceLbl.Location = new System.Drawing.Point(509, 232);
+            this.PriceLbl.Location = new System.Drawing.Point(509, 281);
             this.PriceLbl.Name = "PriceLbl";
             this.PriceLbl.Size = new System.Drawing.Size(79, 32);
             this.PriceLbl.TabIndex = 35;
@@ -230,7 +231,7 @@ namespace Projekt {
             // PriceTb
             // 
             this.PriceTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PriceTb.Location = new System.Drawing.Point(516, 267);
+            this.PriceTb.Location = new System.Drawing.Point(516, 316);
             this.PriceTb.Name = "PriceTb";
             this.PriceTb.Size = new System.Drawing.Size(547, 38);
             this.PriceTb.TabIndex = 34;
@@ -241,7 +242,7 @@ namespace Projekt {
             this.PreparingTimeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.PreparingTimeLbl.ForeColor = System.Drawing.SystemColors.Window;
             this.PreparingTimeLbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PreparingTimeLbl.Location = new System.Drawing.Point(510, 318);
+            this.PreparingTimeLbl.Location = new System.Drawing.Point(510, 367);
             this.PreparingTimeLbl.Name = "PreparingTimeLbl";
             this.PreparingTimeLbl.Size = new System.Drawing.Size(268, 32);
             this.PreparingTimeLbl.TabIndex = 37;
@@ -250,7 +251,7 @@ namespace Projekt {
             // PreparingTimeTb
             // 
             this.PreparingTimeTb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PreparingTimeTb.Location = new System.Drawing.Point(517, 353);
+            this.PreparingTimeTb.Location = new System.Drawing.Point(517, 402);
             this.PreparingTimeTb.Name = "PreparingTimeTb";
             this.PreparingTimeTb.Size = new System.Drawing.Size(547, 38);
             this.PreparingTimeTb.TabIndex = 36;
@@ -260,7 +261,7 @@ namespace Projekt {
             this.ProductCategoryLbl.AutoSize = true;
             this.ProductCategoryLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ProductCategoryLbl.ForeColor = System.Drawing.SystemColors.Window;
-            this.ProductCategoryLbl.Location = new System.Drawing.Point(509, 91);
+            this.ProductCategoryLbl.Location = new System.Drawing.Point(511, 61);
             this.ProductCategoryLbl.Name = "ProductCategoryLbl";
             this.ProductCategoryLbl.Size = new System.Drawing.Size(92, 32);
             this.ProductCategoryLbl.TabIndex = 38;
@@ -268,7 +269,7 @@ namespace Projekt {
             // 
             // InsertUpdateBtn
             // 
-            this.InsertUpdateBtn.Location = new System.Drawing.Point(515, 409);
+            this.InsertUpdateBtn.Location = new System.Drawing.Point(515, 458);
             this.InsertUpdateBtn.Name = "InsertUpdateBtn";
             this.InsertUpdateBtn.Size = new System.Drawing.Size(190, 50);
             this.InsertUpdateBtn.TabIndex = 39;
@@ -276,12 +277,23 @@ namespace Projekt {
             this.InsertUpdateBtn.UseVisualStyleBackColor = true;
             this.InsertUpdateBtn.Click += new System.EventHandler(this.InsertUpdateBtn_Click);
             // 
+            // ProductsCb
+            // 
+            this.ProductsCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ProductsCb.FormattingEnabled = true;
+            this.ProductsCb.Location = new System.Drawing.Point(515, 142);
+            this.ProductsCb.Name = "ProductsCb";
+            this.ProductsCb.Size = new System.Drawing.Size(549, 39);
+            this.ProductsCb.TabIndex = 41;
+            this.ProductsCb.SelectedIndexChanged += new System.EventHandler(this.ProductsCb_SelectedIndexChanged);
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.ProductsCb);
             this.Controls.Add(this.InsertUpdateBtn);
             this.Controls.Add(this.ProductCategoryLbl);
             this.Controls.Add(this.PreparingTimeLbl);
@@ -338,5 +350,6 @@ namespace Projekt {
         private System.Windows.Forms.TextBox PreparingTimeTb;
         private System.Windows.Forms.Label ProductCategoryLbl;
         private System.Windows.Forms.Button InsertUpdateBtn;
+        private System.Windows.Forms.ComboBox ProductsCb;
     }
 }

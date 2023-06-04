@@ -45,6 +45,10 @@
             this.PasswordTb = new System.Windows.Forms.TextBox();
             this.UsernameTb = new System.Windows.Forms.TextBox();
             this.AddProductBtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CurrentOrderLb = new System.Windows.Forms.ListBox();
+            this.EndOrderBtn = new System.Windows.Forms.Button();
+            this.CancleOrderBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).BeginInit();
@@ -195,11 +199,44 @@
             this.AddProductBtn.UseVisualStyleBackColor = true;
             this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click);
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.BackColor = System.Drawing.Color.Red;
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
+            this.label8.Name = "label8";
+            // 
+            // CurrentOrderLb
+            // 
+            this.CurrentOrderLb.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.CurrentOrderLb, "CurrentOrderLb");
+            this.CurrentOrderLb.ForeColor = System.Drawing.SystemColors.Window;
+            this.CurrentOrderLb.FormattingEnabled = true;
+            this.CurrentOrderLb.Name = "CurrentOrderLb";
+            // 
+            // EndOrderBtn
+            // 
+            resources.ApplyResources(this.EndOrderBtn, "EndOrderBtn");
+            this.EndOrderBtn.Name = "EndOrderBtn";
+            this.EndOrderBtn.UseVisualStyleBackColor = true;
+            this.EndOrderBtn.Click += new System.EventHandler(this.EndOrderBtn_Click);
+            // 
+            // CancleOrderBtn
+            // 
+            resources.ApplyResources(this.CancleOrderBtn, "CancleOrderBtn");
+            this.CancleOrderBtn.Name = "CancleOrderBtn";
+            this.CancleOrderBtn.UseVisualStyleBackColor = true;
+            this.CancleOrderBtn.Click += new System.EventHandler(this.CancleOrderBtn_Click);
+            // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
+            this.Controls.Add(this.CancleOrderBtn);
+            this.Controls.Add(this.EndOrderBtn);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CurrentOrderLb);
             this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.UsernameTb);
             this.Controls.Add(this.PasswordTb);
@@ -257,6 +294,10 @@
         private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.TextBox UsernameTb;
         private System.Windows.Forms.Button AddProductBtn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox CurrentOrderLb;
+        private System.Windows.Forms.Button EndOrderBtn;
+        private System.Windows.Forms.Button CancleOrderBtn;
     }
 }
 
