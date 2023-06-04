@@ -27,7 +27,7 @@
             this.BackBtn = new System.Windows.Forms.Button();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.FlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SizesCb = new System.Windows.Forms.ComboBox();
             this.AmountTb = new System.Windows.Forms.TextBox();
             this.UpAmountBtn = new System.Windows.Forms.Button();
             this.DownAmountBtn = new System.Windows.Forms.Button();
@@ -66,14 +66,14 @@
             this.FlowLayoutPanel.Size = new System.Drawing.Size(600, 643);
             this.FlowLayoutPanel.TabIndex = 8;
             // 
-            // comboBox1
+            // SizesCb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(273, 33);
-            this.comboBox1.TabIndex = 9;
+            this.SizesCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SizesCb.FormattingEnabled = true;
+            this.SizesCb.Location = new System.Drawing.Point(12, 141);
+            this.SizesCb.Name = "SizesCb";
+            this.SizesCb.Size = new System.Drawing.Size(273, 33);
+            this.SizesCb.TabIndex = 9;
             // 
             // AmountTb
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.DownAmountBtn);
             this.Controls.Add(this.UpAmountBtn);
             this.Controls.Add(this.AmountTb);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SizesCb);
             this.Controls.Add(this.FlowLayoutPanel);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.BackBtn);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox SizesCb;
         private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Button UpAmountBtn;
         private System.Windows.Forms.Button DownAmountBtn;

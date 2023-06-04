@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projekt {
     internal class Lists {
@@ -20,17 +21,17 @@ namespace Projekt {
               select n;
         }
 
-        //Update ili insert producta
-        public void InsertLists(int orderID,int productID, int amount, int sizeID) {
-            var t = new List {
-                OrderID = orderID,
-                ProductID = productID,
-                Amount = amount,
-                SizeID = sizeID
-            };
-            db.Lists.AddOrUpdate(t);
-            db.SaveChanges();
-
+        //Update ili insert Lists
+        public void InsertLists(Podaci podaci, Order order) {
+            foreach (var n in podaci.ListaPodataka) {
+                List list = new List();
+                list.ProductID = n.ProductID;
+                list.OrderID = order.ID;
+                list.SizeID = n.SizeID;
+                list.Amount = n.Amount;
+                db.Lists.Add(list);
+                db.SaveChanges();
+            }
         }
     }
 }

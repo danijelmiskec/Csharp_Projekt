@@ -88,10 +88,12 @@
     <Compile Include="DrinksForm.Designer.cs">
       <DependentUpon>DrinksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Temp.cs" />
     <Compile Include="List.cs" />
     <Compile Include="Lists.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Orders.cs" />
+    <Compile Include="Podaci.cs" />
     <Compile Include="PommesForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,9 +14,9 @@ namespace Projekt
             Lists = new HashSet<List>();
         }
 
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
-        public int PriceSum { get; set; }
+        public int? PriceSum { get; set; }
 
         public int SumPreparingTIme { get; set; }
 

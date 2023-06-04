@@ -12,13 +12,19 @@ namespace Projekt {
     public partial class PommesForm : Form {
         private Products products = new Products();
         int amount;
-        List list1 = new List();
-        public PommesForm(List list) {
+        public Podaci podaci1 = new Podaci();
+        Product product = new Product();
+        Sizes sizes = new Sizes();
+        Size size = new Size();
+        public PommesForm(Podaci podaci1) {
             InitializeComponent();
             generateButton();
             amount = 1;
             AmountTb.Text = amount.ToString();
-            list1 = list;
+            this.podaci1 = podaci1;
+            SizesCb.Items.Clear();
+            SizesCb.Items.AddRange((sizes.GetSizes(6)).ToArray());
+            product = products.GetProduct("Pommes");
         }
 
         private void generateButton() {
@@ -39,12 +45,14 @@ namespace Projekt {
 
         private void Button_Click(object sender, EventArgs e) {
             Button clickedButton = (Button)sender;
-            Product objekt = (Product)clickedButton.Tag;
-            MessageBox.Show(objekt.ID + " " + objekt.Name);
+            product = (Product)clickedButton.Tag;
+            podaci1.ListaPodataka.Add(new Temp(product.ID, 1, null));
+
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm(list1);
+            var startform = new StartForm(podaci1);
+            //startform.Lista = Lista;
             startform.ShowDialog();
             this.Close();
         }
@@ -63,7 +71,13 @@ namespace Projekt {
         }
 
         private void AddToOrderBtn_Click(object sender, EventArgs e) {
-
+            if (SizesCb.Text != string.Empty) {
+                string name = SizesCb.Text;
+                size = sizes.GetSizeID(name);
+                podaci1.ListaPodataka.Add(new Temp(product.ID, amount, size.ID));
+            } else {
+                MessageBox.Show("Morate odabrati velićinu pića!!");
+            }
         }
     }
 }

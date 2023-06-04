@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,9 @@ namespace Projekt {
     public partial class CoffeeForm : Form {
         private Products products = new Products();
         int amount;
-        List list1 = new List();
-        public CoffeeForm(List list) {
+        Product product = new Product();
+        public Podaci podaci1 = new Podaci();
+        public CoffeeForm(Podaci podaci1) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
@@ -22,7 +24,7 @@ namespace Projekt {
             Productlbl.Hide();
             AddToOrderBtn.Hide();
             generateButton();
-            list1 = list;
+            this.podaci1 = podaci1;
         }
 
         private void generateButton() {
@@ -45,7 +47,7 @@ namespace Projekt {
         //funkcija za svaki dinamicki stvoren button
         private void Button_Click(object sender, EventArgs e) {
             Button clickedButton = (Button)sender;
-            Product product = (Product)clickedButton.Tag;
+            product = (Product)clickedButton.Tag;
             amount = 1;
             AmountTb.Show();
             label2.Show();
@@ -58,7 +60,7 @@ namespace Projekt {
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm(list1);
+            var startform = new StartForm(podaci1);
             startform.ShowDialog();
             this.Close();
         }
@@ -76,7 +78,7 @@ namespace Projekt {
         }
 
         private void AddToOrderBtn_Click(object sender, EventArgs e) {
-
+            podaci1.ListaPodataka.Add(new Temp(product.ID, amount, null));
         }
     }
 }

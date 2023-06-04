@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,10 @@ using System.Windows.Forms;
 namespace Projekt {
     public partial class StartForm : Form {
         private Admins Admins = new Admins();
-        List list = new List();
+        public Podaci podaci1 = new Podaci();
+        Products products = new Products();
+        Lists Lists = new Lists();
+        Orders orders = new Orders();
         public StartForm() {
             InitializeComponent();
             UsernameLbl.Hide();
@@ -19,44 +23,59 @@ namespace Projekt {
             PasswordLbl.Hide();
             PasswordTb.Hide();
             AddProductBtn.Hide();
+            if(podaci1.ListaPodataka != null) {
+                foreach (var t in podaci1.ListaPodataka) {
+                    CurrentOrderLb.Items.Add(t.ToString());
+                }
+            }
         }
-
-        public StartForm(List list) {
+            public StartForm(Podaci podaci) {
             InitializeComponent();
             UsernameLbl.Hide();
             UsernameTb.Hide();
             PasswordLbl.Hide();
             PasswordTb.Hide();
             AddProductBtn.Hide();
-            this.list = list;
+            podaci1 = podaci;
+            if (podaci1.ListaPodataka != null) {
+                foreach (var t in podaci1.ListaPodataka) {
+                    CurrentOrderLb.Items.Add(t.ToString());
+                }
+            }
         }
 
+
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
-            var burgerForm = new BurgersForm(list);
+            var burgerForm = new BurgersForm(podaci1);
             burgerForm.ShowDialog();
+            //burgerForm.
             this.Close();
         }
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
-            var pommesForm = new PommesForm(list);
+            var pommesForm = new PommesForm(podaci1);
+            // pommesForm.array = array;
             pommesForm.ShowDialog();
             this.Close();
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
-            var dessertsForm = new DessertsForm(list);
+            var dessertsForm = new DessertsForm(podaci1);
+            //dessertsForm.array = array;
             dessertsForm.ShowDialog();
             this.Close();
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
-            var drinksForm = new DrinksForm(list);
+            var drinksForm = new DrinksForm(podaci1);
+            //drinksForm.array = array;
             drinksForm.ShowDialog();
             this.Close();
         }
 
         private void CoffeePictureBox_Click(object sender, EventArgs e) {
-            var caffeForm = new CoffeeForm(list);
+            var caffeForm = new CoffeeForm(podaci1);
+            //caffeForm.array = array;
             caffeForm.ShowDialog();
             this.Close();
         }
@@ -99,11 +118,30 @@ namespace Projekt {
         }
 
         private void EndOrderBtn_Click(object sender, EventArgs e) {
-
+            int TotalPreparingTime = 0;
+            int? TotalPrice = 0;
+            MessageBox.Show("Narudzba je zavrsena");
+            Order order = new Order();
+            foreach (var n in podaci1.ListaPodataka) {
+                Product product = new Product();
+                product = products.GetProduct(n.ProductID);
+                TotalPreparingTime += n.Amount *product.PreparingTime ;
+                TotalPrice += product.Price* n.Amount;
+            }
+            order.PriceSum = TotalPrice;
+            order.SumPreparingTIme = TotalPreparingTime;
+            order.Status = "U PRIPREMI";
+            orders.InsertOrder(order);
+            order = orders.GetOrder(order);
+            Lists.InsertLists(podaci1, order);
+            podaci1.ListaPodataka.Clear();
+            CurrentOrderLb.Items.Clear();
         }
 
         private void CancleOrderBtn_Click(object sender, EventArgs e) {
-
+            MessageBox.Show("Narudzba je ponistena!!");
+            podaci1.ListaPodataka.Clear();
+            CurrentOrderLb.Items.Clear();
         }
     }
 }

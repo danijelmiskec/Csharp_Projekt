@@ -13,6 +13,9 @@ namespace Projekt
         {
             Lists = new HashSet<List>();
         }
+        public override string ToString() {
+            return Name;
+        }
 
         public int ID { get; set; }
 

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Projekt {
     internal class Orders {
@@ -14,6 +16,12 @@ namespace Projekt {
             db = new AppContext();
             UPrimpremi = new List<Order>();
             ZaPredaju = new List<Order>();
+        }
+        public Order GetOrder(Order order) {
+            return(
+            from n in db.Orders
+            where n.PriceSum == order.PriceSum && n.SumPreparingTIme == order.SumPreparingTIme 
+            select n).First();
         }
         public void NewOrder(Order order) {
             Task work = new Task(() => {
@@ -43,6 +51,12 @@ namespace Projekt {
                 from p in ZaPredaju
                 select p);
         }
+
+        public void InsertOrder(Order order) {
+            db.Orders.AddOrUpdate(order);
+            db.SaveChanges();
+        }
+
 
         public event OrderDelegat PripremaSe;
         public event OrderDelegat PredajeSe;

@@ -34,6 +34,13 @@ namespace Projekt {
               select n).First();
         }
 
+        public Product GetProduct(int? ID) {
+            return (
+              from n in db.Products
+              where n.ID == ID
+              select n).First();
+        }
+
 
         //Update ili insert producta
         public void UpdateProduct(Product product) {

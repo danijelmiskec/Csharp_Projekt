@@ -30,7 +30,7 @@ namespace Projekt
 
         public int? Price { get; set; }
 
-        public int? PreparingTime { get; set; }
+        public int PreparingTime { get; set; }
 
         public int? CategoryID { get; set; }
 
