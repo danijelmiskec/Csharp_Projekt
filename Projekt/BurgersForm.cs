@@ -15,8 +15,10 @@ namespace Projekt {
         private Products products = new Products();
         int amount;
         Product product = new Product();
-        public Podaci podaci1 = new Podaci();
-        public BurgersForm(Podaci podaci1) {
+        public TempList podaci1 = new TempList();
+        Orders orders = new Orders();
+        StartForm startForm;
+        public BurgersForm(TempList podaci1, StartForm startForm) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
@@ -26,6 +28,7 @@ namespace Projekt {
             AddToOrderBtn.Hide();
             generateButton();
             this.podaci1 = podaci1;
+            this.startForm = startForm;
         }
 
         private void generateButton() {
@@ -60,10 +63,11 @@ namespace Projekt {
 
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm(podaci1);
+            startForm.podaci1 = podaci1;
             //startform.Lista = Lista;
-            startform.ShowDialog();
+            startForm.Show();
             this.Close();
+            
         }
 
         private void UpAmountBtn_Click(object sender, EventArgs e) {
@@ -79,7 +83,7 @@ namespace Projekt {
         }
 
         private void AddToOrderBtn_Click(object sender, EventArgs e) {
-            podaci1.ListaPodataka.Add(new Temp(product.ID, amount, null));
+            podaci1.DataList.Add(new Temp(product.ID, amount, null));
         }
     }
 }

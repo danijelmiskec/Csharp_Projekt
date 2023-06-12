@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Projekt {
-    public class Podaci {
+    public class TempList {
 
-        public List<Temp> ListaPodataka { get; set; }
+        public List<Temp> DataList { get; set; }
        
 
-        public Podaci() {
-            ListaPodataka = new List<Temp>();
+        public TempList() {
+            DataList = new List<Temp>();
             
 
         }

@@ -14,8 +14,8 @@ namespace Projekt {
         private Products products = new Products();
         int amount;
         Product product = new Product();
-        public Podaci podaci1 = new Podaci();
-        public CoffeeForm(Podaci podaci1) {
+        public TempList podaci1 = new TempList();
+        public CoffeeForm(TempList podaci1) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
@@ -78,7 +78,7 @@ namespace Projekt {
         }
 
         private void AddToOrderBtn_Click(object sender, EventArgs e) {
-            podaci1.ListaPodataka.Add(new Temp(product.ID, amount, null));
+            podaci1.DataList.Add(new Temp(product.ID, amount, null));
         }
     }
 }

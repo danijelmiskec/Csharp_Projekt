@@ -13,11 +13,11 @@ namespace Projekt {
     public partial class DrinksForm : Form {
         private Products products = new Products();
         int amount;
-        public Podaci podaci1 = new Podaci();
+        public TempList podaci1 = new TempList();
         Product product = new Product();
         Sizes sizes = new Sizes();
         Size size = new Size();
-        public DrinksForm(Podaci podaci1) {
+        public DrinksForm(TempList podaci1) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
@@ -89,7 +89,7 @@ namespace Projekt {
             if (SizesCb.Text != string.Empty) {
                 string name = SizesCb.Text;
                 size = sizes.GetSizeID(name);
-                podaci1.ListaPodataka.Add(new Temp(product.ID, amount, size.ID));
+                podaci1.DataList.Add(new Temp(product.ID, amount, size.ID));
             } else {
                 MessageBox.Show("Morate odabrati velićinu pića!!");
             }

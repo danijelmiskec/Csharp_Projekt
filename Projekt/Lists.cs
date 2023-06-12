@@ -22,8 +22,8 @@ namespace Projekt {
         }
 
         //Update ili insert Lists
-        public void InsertLists(Podaci podaci, Order order) {
-            foreach (var n in podaci.ListaPodataka) {
+        public void InsertLists(TempList podaci, Order order) {
+            foreach (var n in podaci.DataList) {
                 List list = new List();
                 list.ProductID = n.ProductID;
                 list.OrderID = order.ID;

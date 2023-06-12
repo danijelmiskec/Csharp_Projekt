@@ -26,5 +26,9 @@ namespace Projekt
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<List> Lists { get; set; }
+
+        public override string ToString() {
+            return ID + " Cijena: " + PriceSum + "Vrijeme pripreme: "+SumPreparingTIme;
+        }
     }
 }

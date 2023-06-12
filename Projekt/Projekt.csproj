@@ -93,7 +93,7 @@
     <Compile Include="Lists.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Orders.cs" />
-    <Compile Include="Podaci.cs" />
+    <Compile Include="TempList.cs" />
     <Compile Include="PommesForm.cs">
       <SubType>Form</SubType>
     </Compile>

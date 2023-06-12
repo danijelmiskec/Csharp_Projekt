@@ -17,18 +17,11 @@ namespace Projekt {
             UPrimpremi = new List<Order>();
             ZaPredaju = new List<Order>();
         }
-        public Order GetOrder(Order order) {
-            return(
-            from n in db.Orders
-            where n.PriceSum == order.PriceSum && n.SumPreparingTIme == order.SumPreparingTIme 
-            select n).First();
-        }
         public void NewOrder(Order order) {
             Task work = new Task(() => {
-                Thread.Sleep(2000);
                 UPrimpremi.Add(order);
                 PripremaSe?.Invoke(this);
-                Thread.Sleep(order.SumPreparingTIme);
+                Thread.Sleep((order.SumPreparingTIme*1000)/4); // umanjen preparing time  zbog lakseg testiranja
                 gotovaPriprema(order);
                 PredajeSe?.Invoke(this);
             });
@@ -38,6 +31,7 @@ namespace Projekt {
         public void gotovaPriprema(Order order) {
             ZaPredaju.Add(order);
             UPrimpremi.Remove(order);
+            UpdateOrder(order);
         }
 
         public IEnumerable<Order> DohvatiUPripremi() {
@@ -52,7 +46,13 @@ namespace Projekt {
                 select p);
         }
 
-        public void InsertOrder(Order order) {
+        public Order InsertOrder(Order order) {
+            db.Orders.Add(order);
+            db.SaveChanges();
+            return order;
+        }
+        public void UpdateOrder(Order order) {
+            order.Status = "U PREDAJI";
             db.Orders.AddOrUpdate(order);
             db.SaveChanges();
         }
