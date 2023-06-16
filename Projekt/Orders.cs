@@ -10,6 +10,8 @@ using System.Xml.Linq;
 namespace Projekt {
     internal class Orders {
         private AppContext db;
+        Products products = new Products();
+        Lists lists = new Lists();
         public delegate void OrderDelegat(object sender);
 
         public Orders() {
@@ -17,7 +19,22 @@ namespace Projekt {
             UPrimpremi = new List<Order>();
             ZaPredaju = new List<Order>();
         }
-        public void NewOrder(Order order) {
+        public void NewOrder(TempList tempList) {
+            int TotalPreparingTime = 0;
+            int? TotalPrice = 0;
+            Order order = new Order();
+            foreach (var n in tempList.DataList) {
+                Product product = new Product();
+                product = products.GetProduct(n.ProductID);
+                TotalPreparingTime += n.Amount * product.PreparingTime;
+                TotalPrice += product.Price * n.Amount;
+            }
+            order.PriceSum = TotalPrice;
+            order.SumPreparingTIme = TotalPreparingTime;
+            order.Status = "U PRIPREMI";
+            order = InsertOrder(order);
+            lists.InsertLists(tempList, order);
+            tempList.DataList.Clear();
             Task work = new Task(() => {
                 UPrimpremi.Add(order);
                 PripremaSe?.Invoke(this);

@@ -16,17 +16,19 @@ namespace Projekt {
         Product product = new Product();
         Sizes sizes = new Sizes();
         Size size = new Size();
-        public PommesForm(TempList podaci1) {
+        StartForm startForm;
+        public PommesForm(StartForm startForm) {
             InitializeComponent();
             generateButton();
             amount = 1;
             AmountTb.Text = amount.ToString();
-            this.podaci1 = podaci1;
             SizesCb.Items.Clear();
             SizesCb.Items.AddRange((sizes.GetSizes(6)).ToArray());
             product = products.GetProduct("Pommes");
+            this.podaci1 = startForm.podaci1;
+            this.startForm = startForm;
         }
-
+      
         private void generateButton() {
             FlowLayoutPanel.Controls.Clear(); // Briše prethodno generirane gumbe
             //generiranje gumbova
@@ -51,10 +53,11 @@ namespace Projekt {
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm(podaci1);
-            //startform.Lista = Lista;
-            startform.ShowDialog();
+            startForm.podaci1 = podaci1;
             this.Close();
+            startForm.Show();
+            startForm.OsvjeziFormu();
+
         }
 
         private void UpAmountBtn_Click(object sender, EventArgs e) {
@@ -76,7 +79,7 @@ namespace Projekt {
                 size = sizes.GetSizeID(name);
                 podaci1.DataList.Add(new Temp(product.ID, amount, size.ID));
             } else {
-                MessageBox.Show("Morate odabrati velićinu pića!!");
+                MessageBox.Show("Morate odabrati velićinu y!!");
             }
         }
     }

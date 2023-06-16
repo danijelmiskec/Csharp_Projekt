@@ -17,7 +17,8 @@ namespace Projekt {
         Product product = new Product();
         Sizes sizes = new Sizes();
         Size size = new Size();
-        public DrinksForm(TempList podaci1) {
+        StartForm startForm;
+        public DrinksForm(StartForm startForm) {
             InitializeComponent();
             AmountTb.Hide();
             label2.Hide();
@@ -27,10 +28,10 @@ namespace Projekt {
             AddToOrderBtn.Hide();
             SizesCb.Hide();
             generateButton();
-            this.podaci1 = podaci1;
             SizesCb.Items.Clear();
             SizesCb.Items.AddRange((sizes.GetSizes(9)).ToArray());
-
+            this.podaci1 = startForm.podaci1;
+            this.startForm = startForm;
         }
 
         private void generateButton() {
@@ -66,8 +67,9 @@ namespace Projekt {
         }
 
         private void BackBtn_Click(object sender, EventArgs e) {
-            var startform = new StartForm(podaci1);
-            startform.ShowDialog();
+            startForm.podaci1 = podaci1;
+            startForm.Show();
+            startForm.OsvjeziFormu();
             this.Close();
         }
 

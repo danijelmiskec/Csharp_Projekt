@@ -14,8 +14,6 @@ namespace Projekt {
     public partial class StartForm : Form {
         private Admins Admins = new Admins();
         public TempList podaci1 = new TempList();
-        Products products = new Products();
-        Lists Lists = new Lists();
         Orders orders = new Orders();
         public StartForm() {
             InitializeComponent();
@@ -24,27 +22,6 @@ namespace Projekt {
             PasswordLbl.Hide();
             PasswordTb.Hide();
             AddProductBtn.Hide();
-            if(podaci1.DataList != null) {
-                foreach (var t in podaci1.DataList) {
-                    CurrentOrderLb.Items.Add(t.ToString());
-                }
-            }
-            orders.PripremaSe += OsvijeziPripremu;
-            orders.PredajeSe += OsvijeziPredaju;
-        }
-            public StartForm(TempList podaci) {
-            InitializeComponent();
-            UsernameLbl.Hide();
-            UsernameTb.Hide();
-            PasswordLbl.Hide();
-            PasswordTb.Hide();
-            AddProductBtn.Hide();
-            podaci1 = podaci;
-            if (podaci1.DataList != null) {
-                foreach (var t in podaci1.DataList) {
-                    CurrentOrderLb.Items.Add(t.ToString());
-                }
-            }
             orders.PripremaSe += OsvijeziPripremu;
             orders.PredajeSe += OsvijeziPredaju;
         }
@@ -61,43 +38,54 @@ namespace Projekt {
         private void OsvijeziPredaju(object sender) {
             if (InvokeRequired) {
                 this.Invoke(new MethodInvoker(delegate {
-                    LbPriprema.Items.Clear();
-                    LbPriprema.Items.AddRange(orders.DohvatiUPripremi().ToArray());
-                    LbPredaja.Items.Clear();
-                    LbPredaja.Items.AddRange(orders.DohvatiZaPredaju().ToArray());
+                    OsvjeziFormu();
                 }));
             }
         }
+        public void OsvjeziFormu() {
+            LbPriprema.Items.Clear();
+            LbPriprema.Items.AddRange(orders.DohvatiUPripremi().ToArray());
+            LbPredaja.Items.Clear();
+            LbPredaja.Items.AddRange(orders.DohvatiZaPredaju().ToArray());
+            CurrentOrderLb.Items.Clear();
+            if (podaci1.DataList != null) {
+                foreach (var t in podaci1.DataList) {
+                    CurrentOrderLb.Items.Add(t.ToString());
+                }
+
+            };
+        }
+
 
 
         private void BurgerPictureBox_Click(object sender, EventArgs e) {
-            var burgerForm = new BurgersForm(podaci1,this);
+            var burgerForm = new BurgersForm(this);
             burgerForm.Show();
             this.Hide();
         }
 
         private void PommesPictureBox_Click(object sender, EventArgs e) {
-            var pommesForm = new PommesForm(podaci1);
-            pommesForm.ShowDialog();
-            this.Close();
+            var pommesForm = new PommesForm(this);
+            pommesForm.Show();
+            this.Hide();
         }
 
         private void DessertPictureBox_Click(object sender, EventArgs e) {
-            var dessertsForm = new DessertsForm(podaci1);
-            dessertsForm.ShowDialog();
-            this.Close();
+            var dessertsForm = new DessertsForm(this);
+            dessertsForm.Show();
+            this.Hide();
         }
 
         private void DrinkPictureBox_Click(object sender, EventArgs e) {
-            var drinksForm = new DrinksForm(podaci1);
-            drinksForm.ShowDialog();
-            this.Close();
+            var drinksForm = new DrinksForm(this);
+            drinksForm.Show();
+            this.Hide();
         }
 
         private void CoffeePictureBox_Click(object sender, EventArgs e) {
-            var caffeForm = new CoffeeForm(podaci1);
-            caffeForm.ShowDialog();
-            this.Close();
+            var caffeForm = new CoffeeForm(this);
+            caffeForm.Show();
+            this.Hide();
         }
 
         //Button za prijavu admina
@@ -139,23 +127,8 @@ namespace Projekt {
 
         private void EndOrderBtn_Click(object sender, EventArgs e) {
             if (podaci1.DataList.Count != 0) {
-                int TotalPreparingTime = 0;
-                int? TotalPrice = 0;
-                Order order = new Order();
-                foreach (var n in podaci1.DataList) {
-                    Product product = new Product();
-                    product = products.GetProduct(n.ProductID);
-                    TotalPreparingTime += n.Amount * product.PreparingTime;
-                    TotalPrice += product.Price * n.Amount;
-                }
-                order.PriceSum = TotalPrice;
-                order.SumPreparingTIme = TotalPreparingTime;
-                order.Status = "U PRIPREMI";
-                order = orders.InsertOrder(order);
-                Lists.InsertLists(podaci1, order);
-                podaci1.DataList.Clear();
+                orders.NewOrder(podaci1);
                 CurrentOrderLb.Items.Clear();
-                orders.NewOrder(order);
             } else {
                 MessageBox.Show("Narudzba je prazna");
             }
@@ -166,5 +139,6 @@ namespace Projekt {
             podaci1.DataList.Clear();
             CurrentOrderLb.Items.Clear();
         }
+
     }
 }
