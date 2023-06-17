@@ -68,9 +68,10 @@ namespace Projekt {
 
         private void BackBtn_Click(object sender, EventArgs e) {
             startForm.podaci1 = podaci1;
+            this.Close();
             startForm.Show();
             startForm.OsvjeziFormu();
-            this.Close();
+
         }
 
         //button za povecanje broja proizvoda 

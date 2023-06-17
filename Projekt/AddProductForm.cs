@@ -101,7 +101,7 @@ namespace Projekt {
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
             } else {
-                if (ProductsCb.Text != null || ProductsCb.Text == string.Empty) {
+                if (ProductsCb.Text != null && ProductsCb.Text != string.Empty) {
                     product = products.GetProduct(NameTb.Text);
                     product.Name = NameTb.Text;
                     product.Price = int.Parse(PriceTb.Text);
