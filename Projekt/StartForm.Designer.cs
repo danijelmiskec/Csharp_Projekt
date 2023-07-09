@@ -49,6 +49,7 @@
             this.CurrentOrderLb = new System.Windows.Forms.ListBox();
             this.EndOrderBtn = new System.Windows.Forms.Button();
             this.CancleOrderBtn = new System.Windows.Forms.Button();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BurgerPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PommesPictureBox)).BeginInit();
@@ -228,11 +229,17 @@
             this.CancleOrderBtn.UseVisualStyleBackColor = true;
             this.CancleOrderBtn.Click += new System.EventHandler(this.CancleOrderBtn_Click);
             // 
+            // hScrollBar1
+            // 
+            resources.ApplyResources(this.hScrollBar1, "hScrollBar1");
+            this.hScrollBar1.Name = "hScrollBar1";
+            // 
             // StartForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
+            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.CancleOrderBtn);
             this.Controls.Add(this.EndOrderBtn);
             this.Controls.Add(this.label8);
@@ -298,6 +305,7 @@
         private System.Windows.Forms.ListBox CurrentOrderLb;
         private System.Windows.Forms.Button EndOrderBtn;
         private System.Windows.Forms.Button CancleOrderBtn;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
     }
 }
 
